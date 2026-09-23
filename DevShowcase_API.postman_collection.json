@@ -1,0 +1,441 @@
+{
+  "info": {
+    "_postman_id": "a7c3e9d1-4b52-4f8a-9e16-2d0c8f1b5a74",
+    "name": "DevShowcase API - Apresentação",
+    "description": "Collection para apresentação da DevShowcase API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Criar Perfil",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alysson Moura Pinheiro\",\n  \"bio\": \"Desenvolvedor participante do projeto DevShowcase API\",\n  \"github_url\": \"https://github.com/alyssonhp1-sys\",\n  \"linkedin_url\": \"https://www.linkedin.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/profiles",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "profiles"
+          ]
+        },
+        "description": "Cadastra um novo perfil de desenvolvedor."
+      },
+      "response": []
+    },
+    {
+      "name": "02 - Buscar Perfil",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/profiles/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "profiles",
+            "1"
+          ]
+        },
+        "description": "Busca um perfil pelo seu identificador."
+      },
+      "response": []
+    },
+    {
+      "name": "03 - Criar Tecnologia Python",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Python\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/technologies",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "technologies"
+          ]
+        },
+        "description": "Cadastra a tecnologia Python."
+      },
+      "response": []
+    },
+    {
+      "name": "04 - Criar Tecnologia FastAPI",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"FastAPI\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/technologies",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "technologies"
+          ]
+        },
+        "description": "Cadastra a tecnologia FastAPI."
+      },
+      "response": []
+    },
+    {
+      "name": "05 - Listar Tecnologias",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/technologies",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "technologies"
+          ]
+        },
+        "description": "Lista as tecnologias cadastradas."
+      },
+      "response": []
+    },
+    {
+      "name": "06 - Criar Projeto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"DevShowcase API\",\n  \"description\": \"API para apresentação de perfis e projetos de desenvolvedores.\",\n  \"repository_url\": \"https://github.com/alyssonhp1-sys/devshowcase-api\",\n  \"profile_id\": 1,\n  \"technology_ids\": [1, 2]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/projects",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "projects"
+          ]
+        },
+        "description": "Cadastra um projeto e relaciona o perfil e as tecnologias."
+      },
+      "response": []
+    },
+    {
+      "name": "07 - Listar Projetos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/projects",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "projects"
+          ]
+        },
+        "description": "Lista os projetos cadastrados e suas tecnologias."
+      },
+      "response": []
+    },
+    {
+      "name": "ATIVIDADE 2",
+      "item": [
+        {
+          "name": "01 - Criar Feedback Nota 5",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 5,\n  \"comment\": \"Excelente projeto, muito bem estruturado.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/1/feedbacks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "1",
+                "feedbacks"
+              ]
+            },
+            "description": "Cadastra o primeiro feedback, com nota 5. A média do projeto passa a ser 5.0."
+          },
+          "response": []
+        },
+        {
+          "name": "02 - Criar Feedback Nota 3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 3,\n  \"comment\": \"Bom projeto, com pontos a melhorar.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/1/feedbacks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "1",
+                "feedbacks"
+              ]
+            },
+            "description": "Cadastra o segundo feedback, com nota 3. A média esperada do projeto é 4.0."
+          },
+          "response": []
+        },
+        {
+          "name": "03 - Upvote Projeto",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/projects/1/upvote",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "1",
+                "upvote"
+              ]
+            },
+            "description": "Registra o primeiro upvote. O contador sai de 0 e passa para 1."
+          },
+          "response": []
+        },
+        {
+          "name": "04 - Segundo Upvote Projeto",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/projects/1/upvote",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "1",
+                "upvote"
+              ]
+            },
+            "description": "Registra o segundo upvote. O contador sai de 1 e passa para 2."
+          },
+          "response": []
+        },
+        {
+          "name": "05 - Listar Projetos Paginado",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/projects?page=1&size=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            },
+            "description": "Lista os projetos da página 1, com 10 itens por página."
+          },
+          "response": []
+        },
+        {
+          "name": "06 - Filtrar Projetos por Python",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/projects?technology=Python&page=1&size=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "technology",
+                  "value": "Python"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            },
+            "description": "Lista somente os projetos que usam a tecnologia Python, já paginados."
+          },
+          "response": []
+        },
+        {
+          "name": "07 - Erro 404 - Projeto Inexistente",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/projects/9999/upvote",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "9999",
+                "upvote"
+              ]
+            },
+            "description": "Demonstra o erro 404 ao tentar registrar upvote em um projeto que não existe."
+          },
+          "response": []
+        },
+        {
+          "name": "08 - Erro 400 - Nota Inválida",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 6,\n  \"comment\": \"Nota inválida para demonstrar o erro 400.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/1/feedbacks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "1",
+                "feedbacks"
+              ]
+            },
+            "description": "Demonstra o erro 400 ao cadastrar um feedback com nota 6."
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8001"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# Ambientes virtuais
+.venv/
+venv/
+venv2/
+env/
+
+# Segredos
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.Python
+
+# Banco SQLite local (criado na primeira execução)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Testes e cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Editores e ferramentas locais
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+
+# Workspace local do Postman
+.postman/
